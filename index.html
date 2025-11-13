@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="A professional portfolio showcasing data-driven projects developed with Business Intelligence tools, focused on generating actionable insights and improving decision-making processes" />
+    <meta name="author" content="Sergio Mena" />
+    <title>Sergio Mena | Web Portfolio</title>
+    
+    <!-- Icono de la página -->
+    <link rel="icon" type="image/x-icon" href="assets/img/The_Datalyst_Logo_BannerColors_BlackBG.png" />
+    
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <style>
+        /* ESTILOS COMPLETOS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #2c3e50;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* NAVEGACIÓN */
+        .navbar {
+            background-color: #101824 !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand img {
+            transition: transform 0.3s ease;
+        }
+        
+        .navbar-brand img:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem !important;
+        }
+        
+        .nav-link:hover {
+            color: #18bc9c !important;
+            transform: translateY(-2px);
+        }
+        
+        /* HEADER */
+        .masthead {
+            background-color: #1A1A1A;
+            padding-top: 10rem;
+            padding-bottom: 6rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .masthead-avatar {
+            width: 15rem;
+            height: 15rem;
+            object-fit: cover;
+            border: 5px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(24, 188, 156, 0.5);
+        }
+        
+        .typed-text-output {
+            border-right: 2px solid white;
+            animation: blink 0.7s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { border-color: white; }
+            50% { border-color: transparent; }
+        }
+        
+        /* DIVIDERS */
+        .divider-custom {
+            margin: 1.25rem 0 1.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .divider-custom .divider-custom-line {
+            width: 100%;
+            max-width: 7rem;
+            height: 0.25rem;
+            background-color: #2c3e50;
+            border-radius: 1rem;
+        }
+        
+        .divider-custom .divider-custom-icon {
+            color: #2c3e50;
+            font-size: 2rem;
+            padding: 0 1rem;
+        }
+        
+        .divider-custom-light .divider-custom-line {
+            background-color: white;
+        }
+        
+        .divider-custom-light .divider-custom-icon {
+            color: white;
+        }
+        
+        /* SECCIONES */
+        .page-section {
+            padding: 6rem 0;
+        }
+        
+        .page-section-heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        /* RESUME */
+        .resume-item {
+            padding-left: 2rem;
+            border-left: 4px solid #18bc9c;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .resume-item:before {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            left: -10px;
+            top: 0;
+            background: white;
+            border: 4px solid #18bc9c;
+        }
+        
+        .resume-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+        
+        /* SKILLS */
+        .skills {
+            background-color: #f8f9fa;
+        }
+        
+        .skii-div {
+            padding: 2rem;
+        }
+        
+        .skii-div ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .skii-div li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        
+        .skii-div li:hover {
+            padding-left: 10px;
+            background-color: #f0f0f0;
+        }
+        
+        .skii-div .title h2 {
+            color: #18bc9c;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* PORTFOLIO */
+        .portfolio-item {
+            cursor: pointer;
+            position: relative;
+            display: block;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        
+        .portfolio-item img {
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-item-caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease;
+            opacity: 0;
+            background-color: rgba(24, 188, 156, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .portfolio-item:hover .portfolio-item-caption {
+            opacity: 1;
+        }
+        
+        /* MODALS */
+        .portfolio-modal .modal-dialog {
+            max-width: 800px;
+        }
+        
+        /* TESTIMONIALS */
+        .testimonial-carousel {
+            padding: 2rem 0;
+        }
+        
+        .testimonial-carousel .item {
+            padding: 2rem;
+        }
+        
+        .owl-carousel .owl-nav button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #18bc9c !important;
+            color: white !important;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+        
+        .owl-carousel .owl-nav button.owl-prev {
+            left: -50px;
+        }
+        
+        .owl-carousel .owl-nav button.owl-next {
+            right: -50px;
+        }
+        
+        /* BOTONES */
+        .btn {
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-xl {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .btn-outline-dark:hover {
+            background-color: #2c3e50;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-outline-light {
+            border-color: white;
+        }
+        
+        .btn-outline-light:hover {
+            background-color: white;
+            color: #2c3e50;
+        }
+        
+        .btn-social {
+            width: 3.5rem;
+            height: 3.5rem;
+            font-size: 1.5rem;
+            line-height: 3.5rem;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* FOOTER */
+        .footer {
+            padding-top: 5rem;
+            padding-bottom: 3rem;
+        }
+        
+        .info-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .info-box p {
+            color: #e0e0e0;
+            margin-bottom: 0;
+        }
+        
+        /* COPYRIGHT */
+        .copyright {
+            padding: 1.5rem 0;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .masthead {
+                padding-top: 8rem;
+            }
+            
+            .page-section-heading {
+                font-size: 2rem;
+            }
+            
+            .masthead-avatar {
+                width: 12rem;
+                height: 12rem;
+            }
+            
+            .owl-carousel .owl-nav button.owl-prev {
+                left: 0;
+            }
+            
+            .owl-carousel .owl-nav button.owl-next {
+                right: 0;
+            }
+        }
+    </style>
+</head>
+<body id="page-top">
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">
+                <img src="assets/img/The_Datalyst_Logo_BannerColors_BlackBG.png" style="height: 100px;" alt="">
+            </a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About Me</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#resume">Resume</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#skills">Skills</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#testimonial">Testimonials</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER PRINCIPAL -->
+    <header class="masthead text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <img class="masthead-avatar mb-5 rounded-circle" src="assets/img/IMG_2553.JPG" alt="..." />
+            <h1 class="masthead-heading text-uppercase mb-0">Sergio Mena</h1>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fa-solid fa-circle-user"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="" style="font-size:50px;">
+                <h1 class="typed-text-output text-uppercase d-inline font-weight-lighter text-white"></h1>
+                <div class="typed-text d-none">Business Intelligence Analyst, Data Analyst</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SOBRE MÍ -->
+    <div class="page-section container-fluid mb-5" id="about">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">About Me</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                    <img class="img-fluid rounded w-100" src="assets/img/IMG_2553.JPG" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <h3 class="mb-4">Business Intelligence and Data Analyst</h3>
+                    <p>Discover a professional showcase of Business Intelligence projects that convert raw data into meaningful insights, delivering measurable impact for organizations across diverse industries. Let´s work together!</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Sergio Mena</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary">Master</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">5 Years</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">+502 58047701</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">datalystgt@outlook.com</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>País: <span class="text-secondary">Guatemala</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Remote</span></h6></div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a class="btn btn-xl btn-outline-dark" href="assets/Sergio Mena Resume 25.pdf">
+                            <i class="fas fa-download me-2"></i>
+                            Resume Download!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESUME -->
+    <section id="resume" class="page-section resume">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">My Resume</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="resume-title">Education</h3>
+                    <div class="resume-item">
+                        <h4 style="color: #083e74;">Master In Business Intelligence & Analytics</h4>
+                        <h5>2025 - 2026</h5>
+                        <p><em>Galileo University, Guatemala</em></p>
+                        <p>I am currently pursuing a Master's degree in Business Intelligence and Analytics at Universidad Galileo, where I have completed key modules in data-driven decision-making, business strategy, and analytics.</p>
+                    </div>
+                    <div class="resume-item">
+                        <h4 style="color: #083e74;">Bachelor Industrial & Systems Engineering</h4>
+                        <h5>2024</h5>
+                        <p><em>Rafael Landivar University, Guatemala</em></p>
+                        <p>As a graduate in Industrial and Systems Engineering, I developed a strong foundation in core industrial engineering principles, including process optimization, operations management, data analysis, and continuous improvement.</p>
+                    </div>
+                    <div class="resume-item">
+                        <h4 style="color: #083e74;">From 0 to Data Analyst with Power BI</h4>
+                        <h5>2025</h5>
+                        <p><em>GrowUp Analytics, Costa Rica</em></p>
+                        <p>This program provided a practical, end-to-end learning experience focused on real-world business scenarios.</p>
+                    </div>
+                    <div class="resume-item">
+                        <h4 style="color: #083e74;">Looker Studio: From zero to Expert</h4>
+                        <h5>2025</h5>
+                        <p><em>Udemy, International</em></p>
+                        <p>I completed an extensive Looker Studio specialization through Udemy, covering end-to-end dashboard development and data visualization techniques.</p>
+                    </div>
+                    <div class="resume-item">
+                        <h4 style="color: #083e74;">SQL for Data Analytics</h4>
+                        <h5>2025</h5>
+                        <p><em>GrowUp Analytics, Costa Rica</em></p>
+                        <p>The course 'SQL for Data Analysis' from GrowUp Academy, focused on building solid, practical knowledge in database querying for business insights.</p>
+                    </div>
+                    <div class="resume-item">
+                        <h4 style="color: #083e74;">Scrum Foundations</h4>
+                        <h5>2024</h5>
+                        <p><em>Certiprof, International</em></p>
+                        <p>Gaining a solid understanding of Agile methodologies and the Scrum framework.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="resume-title">Professional Experience</h3>
+                    <div class="resume-item">
+                        <h4 style="color: #083e74;">Business Intelligence Specialist</h4>
+                        <h5>2025 - Present</h5>
+                        <p><em>Telus Digital, Guatemala</em></p>
+                        <ul>
+                            <li>Identify improvement and optimization opportunities through advanced data analysis aligned with business objectives.</li>
+                            <li>Responsible for collecting, interpreting, and transforming large datasets into actionable insights.</li>
+                            <li>Design and develop reporting solutions within databases and data warehouse environments.</li>
+                            <li>Cross-functional collaboration and knowledge-sharing to support technical excellence within the team.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-item">
+                        <h4 style="color: #083e74;">Business Operations Analyst</h4>
+                        <h5>2024 - 2025</h5>
+                        <p><em>Conduent, Guatemala</em></p>
+                        <ul>
+                            <li>Developed dynamic Power BI dashboards to monitor key operational KPIs.</li>
+                            <li>Performed data analysis using SQL and Excel to detect performance trends.</li>
+                            <li>Communicating insights and recommendations clearly to stakeholders.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-item">
+                        <h4 style="color: #083e74;">Reporting Analyst</h4>
+                        <h5>2022 - 2024</h5>
+                        <p><em>Conduent, Guatemala</em></p>
+                        <ul>
+                            <li>Designing, developing, and validating operational reports using Business Intelligence tools.</li>
+                            <li>Ensured accurate data reporting aligned with KPIs.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-item">
+                        <h4 style="color: #083e74;">Real Time Analyst</h4>
+                        <h5>2021 - 2022</h5>
+                        <p><em>Conduent, Guatemala</em></p>
+                        <ul>
+                            <li>Monitoring real-time adherence to work schedules.</li>
+                            <li>Analyzing forecast vs. actual staffing data.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-item">
+                        <h4 style="color: #083e74;">Real Time Analyst</h4>
+                        <h5>2019 - 2021</h5>
+                        <p><em>24-7 Intouch, Guatemala</em></p>
+                        <ul>
+                            <li>Supervising real-time schedule adherence.</li>
+                            <li>Collaborated with team leaders and operations managers.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <div id="skills" class="page-section skills">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Skills</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 skii-div">
+                    <div class="title">
+                        <h2>Technical Skill</h2>
+                    </div>
+                    <ul>
+                        <li><p style="color: black;">Microsoft Excel</p></li>
+                        <li><p style="color: black;">Microsoft Power BI</p></li>
+                        <li><p style="color: black;">Google Sheets</p></li>
+                        <li><p style="color: black;">Power Query</p></li>
+                        <li><p style="color: black;">Looker Studio</p></li>
+                        <li><p style="color: black;">Azure Data Factory</p></li>
+                        <li><p style="color: black;">SQL</p></li>
+                        <li><p style="color: black;">BigQuery</p></li>
+                        <li><p style="color: black;">Microsoft Office</p></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 skii-div">
+                    <div class="title">
+                        <h2>Soft Skills</h2>
+                    </div>
+                    <ul>
+                        <li><p style="color: black;">Effective Communication</p></li>
+                        <li><p style="color: black;">Teamwork</p></li>
+                        <li><p style="color: black;">Organization</p></li>
+                        <li><p style="color: black;">Critical Thinking</p></li>
+                        <li><p style="color: black;">Attention to Detail</p></li>
+                        <li><p style="color: black;">Time Management</p></li>
+                        <li><p style="color: black;">Continuous Learning</p></li>
+                        <li><p style="color: black;">Adaptability</p></li>
+                        <li><p style="color: black;">Proactive</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Portfolio Item 1 -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/Zaguates.jpg" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/InformeVentas .jpg" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/QuickSpot.jpg" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 4 -->
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/ContosoResGlobales.jpg" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 5 -->
+                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/HR Training Dashboard.jpg" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="page-section container" id="testimonial">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Testimonials</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fa-solid fa-comment-dots"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left mb-4" style="color: #083e74;"></i>
+                            <h4 class="font-weight-light mb-4">Sergio created an outstanding HR Employee Profile Dashboard that exceeded all our expectations. The design is intuitive, visually clean, and packed with powerful insights. It streamlined how we view and manage employee data, saving time and improving decision-making across the board.</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="assets/img/Otto Folgar.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Otto Folgar</h5>
+                            <span>Data Driven HR Specialist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-section footer text-center" id="contact" style="background-color: #021b33;">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase mb-5" style="color: white;">Contact Me</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-5 py-3">
+                    <div class="info-box">
+                        <h3>Social Profiles</h3>
+                        <br>
+                        <div class="social-links">
+                            <a class="btn btn-outline-light btn-social mx-1" href="https://api.whatsapp.com/send/?phone=50258047701&text&type=phone_number&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/sergio-ren%C3%A9-mena-velasquez/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fa-brands fa-github"></i></a>
+                            <a class="btn btn-outline-light btn-social mx-1" href="mailto:datalystgt@outlook.com"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="info-box">
+                        <i class="fa-sharp fa-solid fa-envelope" style="height: 40px;"></i>
+                        <br><br>
+                        <h3>Email Me</h3>
+                        <p>datalystgt@outlook.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="info-box">
+                        <i class="bx fa-solid fa-phone-volume" style="height: 40px;"></i>
+                        <br><br>
+                        <h3>Call Me</h3>
+                        <p>+50258047701</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- COPYRIGHT -->
+    <div class="copyright py-4 text-center text-white" style="background-color: #000102;">
+        <div class="container"><small>Copyright &copy; Sergio Mena 2025</small></div>
+    </div>
+
+    <!-- MODALES DE PROYECTOS -->
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Territorio de Zaguates Dashboard</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fa-solid fa-paw"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <img class="img-fluid rounded mb-5" style="height: 250px;" src="assets/img/Zaguates.jpg" alt="..." />
+                                <p class="mb-4">Purpose-driven Power BI dashboard developed as part of a Growup Analytics challenge for "Territorio de Zaguates" (Costa Rica), a dog rescue organization. The project features advanced Power BI capabilities, including Time Intelligence, DAX, interactive navigation menus, and dynamic visuals to support data storytelling and operational insights.</p>
+                                <div class="text-center mt-4">
+                                    <a class="btn btn-xl btn-outline-dark" href="https://app.powerbi.com/view?r=eyJrIjoiMTI1NTZhODktZGM0Yi00MThiLTg0ZDktYTliNGYxNmM0MGEwIiwidCI6ImRjNDFlNWNhLTg3YWItNDkzMi04NmFiLTNlNjM5NTFhOWUyZiIsImMiOjJ9">
+                                        <i class="fa-solid fa-chart-bar"></i>
+                                        Go to Report
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Sales Report</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fa-solid fa-money-check-dollar"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <img class="img-fluid rounded mb-5" style="height: 250px;" src="assets/img/InformeVentas .jpg" alt="..." />
+                                <p class="mb-4">Sales dashboard developed for a small business in Guatemala, designed to provide clear and actionable insights into annual sales performance. The dashboard visualizes key metrics such as total sales by region, product category, and salesperson, enabling the business owner to identify top-performing areas and optimize commercial strategies. Built using Power BI, it combines interactivity, dynamic filtering, and intuitive visuals to support informed decision making.</p>
+                                <div class="text-center mt-4">
+                                    <a class="btn btn-xl btn-outline-dark" href="https://app.powerbi.com/view?r=eyJrIjoiNDIzMzViZGUtMzIxNS00N2QzLTkwNjUtMmIwY2VmOWYwN2YxIiwidCI6ImRjNDFlNWNhLTg3YWItNDkzMi04NmFiLTNlNjM5NTFhOWUyZiIsImMiOjJ9">
+                                        <i class="fa-solid fa-chart-bar"></i>
+                                        Go to Report
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Quick Spot</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <img class="img-fluid rounded mb-5" src="assets/img/QuickSpot.jpg" alt="..." />
+                                <p class="mb-4">Final project developed for the "Zero to Data Analyst with Power BI" certification at Growup Analytics. This sales performance dashboard was built for a small business and focuses on visualizing trends and profitability by category, segment, and region. Key insights included year-over-year sales growth, profitability analysis, and sales goal achievement by region. The report highlights high performing product categories—particularly in technology and provides strategic recommendations based on regional performance gaps. Advanced Power BI techniques such as Time Intelligence, dynamic DAX measures, and goal comparisons were applied to support data driven decision making.</p>
+                                <div class="text-center mt-4">
+                                    <a class="btn btn-xl btn-outline-dark" href="https://app.powerbi.com/view?r=eyJrIjoiM2U1MTczNWYtODBjMS00NjAwLWI3YjItMjk5NjRmODM0YzRiIiwidCI6ImRjNDFlNWNhLTg3YWItNDkzMi04NmFiLTNlNjM5NTFhOWUyZiIsImMiOjJ9">
+                                        <i class="fa-solid fa-chart-bar"></i>
+                                        Go to Report
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Full Sales Report</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <img class="img-fluid rounded mb-5" src="assets/img/ContosoResGlobales.jpg" alt="..." />
+                                <p class="mb-4">This sales dashboard was developed progressively throughout the 18-hour "From Zero to Data Analyst with Power BI" course by Growup Analytics. Built step by step with each module, the project integrates essential and advanced Power BI features, including Time Intelligence, DAX, slicers, bookmarks, and interactive maps. It analyzes sales performance by category, region, and segment, compares results year over year, and tracks progress toward sales targets. The dashboard reflects a comprehensive, hands-on learning experience that covered all key areas of business data analysis and reporting.</p>
+                                <div class="text-center mt-4">
+                                    <a class="btn btn-xl btn-outline-dark" href="https://app.powerbi.com/reportEmbed?reportId=4705eea3-e561-49ab-bb88-501cb7aa184d&autoAuth=true&ctid=dc41e5ca-87ab-4932-86ab-3e63951a9e2f">
+                                        <i class="fa-solid fa-chart-bar"></i>
+                                        Go to Report
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">HR Report</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <img class="img-fluid rounded mb-5" src="assets/img/HR Training Dashboard.jpg" alt="..." />
+                                <p class="mb-4">This is an end-to-end Business Intelligence (BI) Solution developed for Human Resources and Operations management. Leveraging my background in Industrial and Systems Engineering, the project is focused on measuring and managing the Operational Efficiency of human capital. The dashboard transforms raw personnel data (absenteeism, turnover, surveys) into critical metrics for strategic decision-making.</p>
+                                <div class="text-center mt-4">
+                                    <a class="btn btn-xl btn-outline-dark" href="https://app.powerbi.com/view?r=eyJrIjoiYjI4NGMzOTktZjkxYi00M2MzLTk2YzUtOTQwMjg5ZGIyYmM0IiwidCI6ImRjNDFlNWNhLTg3YWItNDkzMi04NmFiLTNlNjM5NTFhOWUyZiIsImMiOjJ9">
+                                        <i class="fa-solid fa-chart-bar"></i>
+                                        Go to Report
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <script>
+        // Efecto de escritura (Typed.js effect)
+        document.addEventListener('DOMContentLoaded', function() {
+            const typedTextSpan = document.querySelector(".typed-text-output");
+            const typedTextContent = document.querySelector(".typed-text");
+            
+            if (typedTextSpan && typedTextContent) {
+                const textArray = typedTextContent.textContent.split(',');
+                const typingDelay = 100;
+                const erasingDelay = 50;
+                const newTextDelay = 2000;
+                let textArrayIndex = 0;
+                let charIndex = 0;
+
+                function type() {
+                    if (charIndex < textArray[textArrayIndex].length) {
+                        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                        charIndex++;
+                        setTimeout(type, typingDelay);
+                    } else {
+                        setTimeout(erase, newTextDelay);
+                    }
+                }
+
+                function erase() {
+                    if (charIndex > 0) {
+                        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                        charIndex--;
+                        setTimeout(erase, erasingDelay);
+                    } else {
+                        textArrayIndex++;
+                        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                        setTimeout(type, typingDelay + 1100);
+                    }
+                }
+
+                setTimeout(type, newTextDelay + 250);
+            }
+        });
+
+        // Owl Carousel para testimonials
+        $(document).ready(function(){
+            $(".testimonial-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                nav: true,
+                navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+                dots: true
+            });
+        });
+
+        // Smooth scrolling para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Cerrar el menú en móvil después de hacer clic
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
+                    }
+                }
+            });
+        });
+
+        // Cambiar el navbar al hacer scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('mainNav');
+            if (window.scrollY > 100) {
+                navbar.style.backgroundColor = '#0a0f1a';
+                navbar.style.boxShadow = '0 4px 15px rgba(0,0,0,0.5)';
+            } else {
+                navbar.style.backgroundColor = '#101824';
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
+            }
+        });
+    </script>
+</body>
+</html>
